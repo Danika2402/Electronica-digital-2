@@ -14,15 +14,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "34 Pic y adafruit.c
 [; ;Pic y adafruit.c: 34: void setup (void);
 [v _setup `(v ~T0 @X0 0 ef ]
-"166 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 166: extern volatile unsigned char PORTA __attribute__((address(0x005)));
-[v _PORTA `Vuc ~T0 @X0 0 e@5 ]
-"18 ./USART.h
-[; ;./USART.h: 18: void USART_string(char *cadena);
-[v _USART_string `(v ~T0 @X0 0 ef1`*uc ]
-"16
-[; ;./USART.h: 16: void USART_Tx(char data);
-[v _USART_Tx `(v ~T0 @X0 0 ef1`uc ]
 "543 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h
 [; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 543:     struct {
 [s S19 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -37,9 +28,15 @@ Version 4.0 HI-TECH Software Intermediate Code
 "17 ./USART.h
 [; ;./USART.h: 17: char USART_Rx(void);
 [v _USART_Rx `(uc ~T0 @X0 0 ef ]
+"16
+[; ;./USART.h: 16: void USART_Tx(char data);
+[v _USART_Tx `(v ~T0 @X0 0 ef1`uc ]
 "352 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h
 [; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 352: extern volatile unsigned char PORTD __attribute__((address(0x008)));
 [v _PORTD `Vuc ~T0 @X0 0 e@8 ]
+"166
+[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 166: extern volatile unsigned char PORTA __attribute__((address(0x005)));
+[v _PORTA `Vuc ~T0 @X0 0 e@5 ]
 "3387
 [; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 3387: extern volatile unsigned char ANSEL __attribute__((address(0x188)));
 [v _ANSEL `Vuc ~T0 @X0 0 e@392 ]
@@ -489,229 +486,156 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;Pic y adafruit.c: 50:     while(1){
 [e :U 145 ]
 {
-"51
-[; ;Pic y adafruit.c: 51:         oldCont = cont;
-[e = _oldCont _cont ]
 "52
-[; ;Pic y adafruit.c: 52:         oldCont1 = cont1;
-[e = _oldCont1 _cont1 ]
-"54
-[; ;Pic y adafruit.c: 54:         centena = (cont / 100);
+[; ;Pic y adafruit.c: 52:         centena = (cont / 100);
 [e = _centena -> / -> _cont `i -> 100 `i `uc ]
-"55
-[; ;Pic y adafruit.c: 55:         decena = ((cont - (centena*100)) / 10);
+"53
+[; ;Pic y adafruit.c: 53:         decena = ((cont - (centena*100)) / 10);
 [e = _decena -> / - -> _cont `i * -> _centena `i -> 100 `i -> 10 `i `uc ]
-"56
-[; ;Pic y adafruit.c: 56:         unidad = ((cont - (centena*100)) - (decena*10));
+"54
+[; ;Pic y adafruit.c: 54:         unidad = ((cont - (centena*100)) - (decena*10));
 [e = _unidad -> - - -> _cont `i * -> _centena `i -> 100 `i * -> _decena `i -> 10 `i `uc ]
-"58
-[; ;Pic y adafruit.c: 58:         centena2 = (PORTA /100);
-[e = _centena2 -> / -> _PORTA `i -> 100 `i `uc ]
-"59
-[; ;Pic y adafruit.c: 59:         decena2 = ((PORTA - (centena2*100)) / 10);
-[e = _decena2 -> / - -> _PORTA `i * -> _centena2 `i -> 100 `i -> 10 `i `uc ]
-"60
-[; ;Pic y adafruit.c: 60:         unidad2 = ((PORTA - (centena2*100)) - (decena2*10));
-[e = _unidad2 -> - - -> _PORTA `i * -> _centena2 `i -> 100 `i * -> _decena2 `i -> 10 `i `uc ]
-"62
-[; ;Pic y adafruit.c: 62:         centena += 48;
+"56
+[; ;Pic y adafruit.c: 56:         centena += 48;
 [e =+ _centena -> -> 48 `i `uc ]
-"63
-[; ;Pic y adafruit.c: 63:         decena += 48;
+"57
+[; ;Pic y adafruit.c: 57:         decena += 48;
 [e =+ _decena -> -> 48 `i `uc ]
-"64
-[; ;Pic y adafruit.c: 64:         unidad += 48;
+"58
+[; ;Pic y adafruit.c: 58:         unidad += 48;
 [e =+ _unidad -> -> 48 `i `uc ]
-"66
-[; ;Pic y adafruit.c: 66:         centena2 += 48;
-[e =+ _centena2 -> -> 48 `i `uc ]
-"67
-[; ;Pic y adafruit.c: 67:         decena2 += 48;
-[e =+ _decena2 -> -> 48 `i `uc ]
-"68
-[; ;Pic y adafruit.c: 68:         unidad2 += 48;
-[e =+ _unidad2 -> -> 48 `i `uc ]
-"70
-[; ;Pic y adafruit.c: 70:         if(oldCont != cont || oldCont1!= cont1){
-[e $ ! || != -> _oldCont `i -> _cont `i != -> _oldCont1 `i -> _cont1 `i 147  ]
+"60
+[; ;Pic y adafruit.c: 60:         if (PIR1bits.RCIF == 1){
+[e $ ! == -> . . _PIR1bits 0 5 `i -> 1 `i 147  ]
 {
-"72
-[; ;Pic y adafruit.c: 72:             USART_string("+ para aumentar PORTA\n\r");
-[e ( _USART_string (1 :s 1C ]
-"73
-[; ;Pic y adafruit.c: 73:             USART_string("- para decrementar PORTA\n\r");
-[e ( _USART_string (1 :s 2C ]
-"75
-[; ;Pic y adafruit.c: 75:             USART_string("\n\r\n\rValor del PORTD:\n");
-[e ( _USART_string (1 :s 3C ]
-"76
-[; ;Pic y adafruit.c: 76:             USART_Tx(centena);
-[e ( _USART_Tx (1 _centena ]
-"77
-[; ;Pic y adafruit.c: 77:             USART_Tx(decena);
-[e ( _USART_Tx (1 _decena ]
-"78
-[; ;Pic y adafruit.c: 78:             USART_Tx(unidad);
-[e ( _USART_Tx (1 _unidad ]
-"79
-[; ;Pic y adafruit.c: 79:             USART_string("V\n\r");
-[e ( _USART_string (1 :s 4C ]
-"81
-[; ;Pic y adafruit.c: 81:             USART_string("\n\r\n\rValor del PORTA:\n");
-[e ( _USART_string (1 :s 5C ]
-"82
-[; ;Pic y adafruit.c: 82:             USART_Tx(centena2);
-[e ( _USART_Tx (1 _centena2 ]
-"83
-[; ;Pic y adafruit.c: 83:             USART_Tx(decena2);
-[e ( _USART_Tx (1 _decena2 ]
-"84
-[; ;Pic y adafruit.c: 84:             USART_Tx(unidad2);
-[e ( _USART_Tx (1 _unidad2 ]
-"85
-[; ;Pic y adafruit.c: 85:             USART_string("V\n\r");
-[e ( _USART_string (1 :s 6C ]
-"87
-[; ;Pic y adafruit.c: 87:         }
-}
-[e :U 147 ]
-"89
-[; ;Pic y adafruit.c: 89:         if (PIR1bits.RCIF == 1){
-[e $ ! == -> . . _PIR1bits 0 5 `i -> 1 `i 148  ]
-{
-"90
-[; ;Pic y adafruit.c: 90:             listo = USART_Rx();
+"62
+[; ;Pic y adafruit.c: 62:             listo = USART_Rx();
 [e = _listo ( _USART_Rx ..  ]
-"91
-[; ;Pic y adafruit.c: 91:             if(listo == '+'){
-[e $ ! == -> _listo `ui -> 43 `ui 149  ]
+"63
+[; ;Pic y adafruit.c: 63:             cont1 = listo;
+[e = _cont1 _listo ]
+"64
+[; ;Pic y adafruit.c: 64:             if(listo == 's'){
+[e $ ! == -> _listo `ui -> 115 `ui 148  ]
 {
-"92
-[; ;Pic y adafruit.c: 92:                 cont1++;
-[e ++ _cont1 -> -> 1 `i `uc ]
-"93
-[; ;Pic y adafruit.c: 93:             }else if(listo == '-'){
-}
-[e $U 150  ]
-[e :U 149 ]
-[e $ ! == -> _listo `ui -> 45 `ui 151  ]
-{
-"94
-[; ;Pic y adafruit.c: 94:                 cont1--;
-[e -- _cont1 -> -> 1 `i `uc ]
-"95
-[; ;Pic y adafruit.c: 95:             }
-}
-[e :U 151 ]
-[e :U 150 ]
-"96
-[; ;Pic y adafruit.c: 96:         }
+"65
+[; ;Pic y adafruit.c: 65:             USART_Tx(centena);
+[e ( _USART_Tx (1 _centena ]
+"66
+[; ;Pic y adafruit.c: 66:             USART_Tx(decena);
+[e ( _USART_Tx (1 _decena ]
+"67
+[; ;Pic y adafruit.c: 67:             USART_Tx(unidad);
+[e ( _USART_Tx (1 _unidad ]
+"68
+[; ;Pic y adafruit.c: 68:             listo = 0;
+[e = _listo -> -> 0 `i `uc ]
+"70
+[; ;Pic y adafruit.c: 70:             }
 }
 [e :U 148 ]
-"97
-[; ;Pic y adafruit.c: 97:         PORTD = cont;
+"71
+[; ;Pic y adafruit.c: 71:             PIR1bits.RCIF = 0;
+[e = . . _PIR1bits 0 5 -> -> 0 `i `uc ]
+"72
+[; ;Pic y adafruit.c: 72:         }
+}
+[e :U 147 ]
+"73
+[; ;Pic y adafruit.c: 73:         PORTD = cont;
 [e = _PORTD -> _cont `uc ]
-"98
-[; ;Pic y adafruit.c: 98:         PORTA = cont1;
+"74
+[; ;Pic y adafruit.c: 74:         PORTA = cont1;
 [e = _PORTA -> _cont1 `uc ]
-"99
-[; ;Pic y adafruit.c: 99:         listo = 0;
-[e = _listo -> -> 0 `i `uc ]
-"101
-[; ;Pic y adafruit.c: 101:     }
+"105
+[; ;Pic y adafruit.c: 105:     }
 }
 [e :U 144 ]
 [e $U 145  ]
 [e :U 146 ]
-"103
-[; ;Pic y adafruit.c: 103:     return;
+"107
+[; ;Pic y adafruit.c: 107:     return;
 [e $UE 143  ]
-"104
-[; ;Pic y adafruit.c: 104: }
+"108
+[; ;Pic y adafruit.c: 108: }
 [e :UE 143 ]
 }
-"106
-[; ;Pic y adafruit.c: 106: void setup(void){
+"110
+[; ;Pic y adafruit.c: 110: void setup(void){
 [v _setup `(v ~T0 @X0 1 ef ]
 {
 [e :U _setup ]
 [f ]
-"107
-[; ;Pic y adafruit.c: 107:     ANSEL = 0x00;
-[e = _ANSEL -> -> 0 `i `uc ]
-"108
-[; ;Pic y adafruit.c: 108:     ANSELH = 0x00;
-[e = _ANSELH -> -> 0 `i `uc ]
-"110
-[; ;Pic y adafruit.c: 110:     TRISA = 0x00;
-[e = _TRISA -> -> 0 `i `uc ]
 "111
-[; ;Pic y adafruit.c: 111:     TRISB = 0x03;
-[e = _TRISB -> -> 3 `i `uc ]
+[; ;Pic y adafruit.c: 111:     ANSEL = 0x00;
+[e = _ANSEL -> -> 0 `i `uc ]
 "112
-[; ;Pic y adafruit.c: 112:     TRISC = 0b10000000;
-[e = _TRISC -> -> 128 `i `uc ]
-"113
-[; ;Pic y adafruit.c: 113:     TRISD = 0x00;
-[e = _TRISD -> -> 0 `i `uc ]
+[; ;Pic y adafruit.c: 112:     ANSELH = 0x00;
+[e = _ANSELH -> -> 0 `i `uc ]
+"114
+[; ;Pic y adafruit.c: 114:     TRISA = 0x00;
+[e = _TRISA -> -> 0 `i `uc ]
 "115
-[; ;Pic y adafruit.c: 115:     PORTA = 0x00;
-[e = _PORTA -> -> 0 `i `uc ]
+[; ;Pic y adafruit.c: 115:     TRISB = 0x03;
+[e = _TRISB -> -> 3 `i `uc ]
 "116
-[; ;Pic y adafruit.c: 116:     PORTB = 0x00;
-[e = _PORTB -> -> 0 `i `uc ]
+[; ;Pic y adafruit.c: 116:     TRISC = 0b10000000;
+[e = _TRISC -> -> 128 `i `uc ]
 "117
-[; ;Pic y adafruit.c: 117:     PORTD = 0x00;
-[e = _PORTD -> -> 0 `i `uc ]
-"118
-[; ;Pic y adafruit.c: 118:     PORTC = 0x00;
-[e = _PORTC -> -> 0 `i `uc ]
+[; ;Pic y adafruit.c: 117:     TRISD = 0x00;
+[e = _TRISD -> -> 0 `i `uc ]
+"119
+[; ;Pic y adafruit.c: 119:     PORTA = 0x00;
+[e = _PORTA -> -> 0 `i `uc ]
 "120
-[; ;Pic y adafruit.c: 120:     OSCCONbits.IRCF = 0b111;
-[e = . . _OSCCONbits 0 4 -> -> 7 `i `uc ]
+[; ;Pic y adafruit.c: 120:     PORTB = 0x00;
+[e = _PORTB -> -> 0 `i `uc ]
 "121
-[; ;Pic y adafruit.c: 121:     OSCCONbits.SCS = 1;
-[e = . . _OSCCONbits 0 0 -> -> 1 `i `uc ]
+[; ;Pic y adafruit.c: 121:     PORTD = 0x00;
+[e = _PORTD -> -> 0 `i `uc ]
+"122
+[; ;Pic y adafruit.c: 122:     PORTC = 0x00;
+[e = _PORTC -> -> 0 `i `uc ]
 "124
-[; ;Pic y adafruit.c: 124:     OPTION_REGbits.nRBPU = 0;
-[e = . . _OPTION_REGbits 0 5 -> -> 0 `i `uc ]
+[; ;Pic y adafruit.c: 124:     OSCCONbits.IRCF = 0b111;
+[e = . . _OSCCONbits 0 4 -> -> 7 `i `uc ]
 "125
-[; ;Pic y adafruit.c: 125:     WPUBbits.WPUB0 = 1;
-[e = . . _WPUBbits 1 0 -> -> 1 `i `uc ]
-"126
-[; ;Pic y adafruit.c: 126:     WPUBbits.WPUB1 = 1;
-[e = . . _WPUBbits 1 1 -> -> 1 `i `uc ]
+[; ;Pic y adafruit.c: 125:     OSCCONbits.SCS = 1;
+[e = . . _OSCCONbits 0 0 -> -> 1 `i `uc ]
 "128
-[; ;Pic y adafruit.c: 128:     IOCBbits.IOCB0 = 1;
-[e = . . _IOCBbits 1 0 -> -> 1 `i `uc ]
+[; ;Pic y adafruit.c: 128:     OPTION_REGbits.nRBPU = 0;
+[e = . . _OPTION_REGbits 0 5 -> -> 0 `i `uc ]
 "129
-[; ;Pic y adafruit.c: 129:     IOCBbits.IOCB1 = 1;
-[e = . . _IOCBbits 1 1 -> -> 1 `i `uc ]
-"131
-[; ;Pic y adafruit.c: 131:     INTCONbits.GIE = 1;
-[e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
+[; ;Pic y adafruit.c: 129:     WPUBbits.WPUB0 = 1;
+[e = . . _WPUBbits 1 0 -> -> 1 `i `uc ]
+"130
+[; ;Pic y adafruit.c: 130:     WPUBbits.WPUB1 = 1;
+[e = . . _WPUBbits 1 1 -> -> 1 `i `uc ]
 "132
-[; ;Pic y adafruit.c: 132:     INTCONbits.RBIE = 1;
-[e = . . _INTCONbits 0 3 -> -> 1 `i `uc ]
+[; ;Pic y adafruit.c: 132:     IOCBbits.IOCB0 = 1;
+[e = . . _IOCBbits 1 0 -> -> 1 `i `uc ]
 "133
-[; ;Pic y adafruit.c: 133:     INTCONbits.RBIF = 0;
-[e = . . _INTCONbits 0 0 -> -> 0 `i `uc ]
-"134
-[; ;Pic y adafruit.c: 134:     USART_Int();
-[e ( _USART_Int ..  ]
+[; ;Pic y adafruit.c: 133:     IOCBbits.IOCB1 = 1;
+[e = . . _IOCBbits 1 1 -> -> 1 `i `uc ]
 "135
-[; ;Pic y adafruit.c: 135:     cont = 0;
-[e = _cont -> -> 0 `i `uc ]
+[; ;Pic y adafruit.c: 135:     INTCONbits.GIE = 1;
+[e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
 "136
-[; ;Pic y adafruit.c: 136:     cont1 = 0;
-[e = _cont1 -> -> 0 `i `uc ]
+[; ;Pic y adafruit.c: 136:     INTCONbits.RBIE = 1;
+[e = . . _INTCONbits 0 3 -> -> 1 `i `uc ]
 "137
-[; ;Pic y adafruit.c: 137: }
-[e :UE 152 ]
+[; ;Pic y adafruit.c: 137:     INTCONbits.RBIF = 0;
+[e = . . _INTCONbits 0 0 -> -> 0 `i `uc ]
+"138
+[; ;Pic y adafruit.c: 138:     USART_Int();
+[e ( _USART_Int ..  ]
+"139
+[; ;Pic y adafruit.c: 139:     cont = 0;
+[e = _cont -> -> 0 `i `uc ]
+"140
+[; ;Pic y adafruit.c: 140:     cont1 = 0;
+[e = _cont1 -> -> 0 `i `uc ]
+"141
+[; ;Pic y adafruit.c: 141: }
+[e :UE 149 ]
 }
-[a 4C 86 10 13 0 ]
-[a 6C 86 10 13 0 ]
-[a 1C 43 32 112 97 114 97 32 97 117 109 101 110 116 97 114 32 80 79 82 84 65 10 13 0 ]
-[a 2C 45 32 112 97 114 97 32 100 101 99 114 101 109 101 110 116 97 114 32 80 79 82 84 65 10 13 0 ]
-[a 3C 10 13 10 13 86 97 108 111 114 32 100 101 108 32 80 79 82 84 68 58 10 0 ]
-[a 5C 10 13 10 13 86 97 108 111 114 32 100 101 108 32 80 79 82 84 65 58 10 0 ]

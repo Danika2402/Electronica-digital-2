@@ -21,7 +21,7 @@
 [v _isr isr `II(v  1 e 1 0 ]
 "48
 [v _main main `(v  1 e 1 0 ]
-"106
+"110
 [v _setup setup `(v  1 e 1 0 ]
 "11 C:\Users\Pavilion\OneDrive\Documentos\Electronica digital 2\Lab05.X\USART.c
 [v _USART_Int USART_Int `(v  1 e 1 0 ]
@@ -29,8 +29,6 @@
 [v _USART_Tx USART_Tx `(v  1 e 1 0 ]
 "32
 [v _USART_Rx USART_Rx `(uc  1 e 1 0 ]
-"36
-[v _USART_string USART_string `(v  1 e 1 0 ]
 "166 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h
 [v _PORTA PORTA `VEuc  1 e 1 @5 ]
 "228
@@ -39,7 +37,7 @@
 [v _PORTC PORTC `VEuc  1 e 1 @7 ]
 "352
 [v _PORTD PORTD `VEuc  1 e 1 @8 ]
-[s S176 . 1 `uc 1 RBIF 1 0 :1:0 
+[s S171 . 1 `uc 1 RBIF 1 0 :1:0 
 `uc 1 INTF 1 0 :1:1 
 `uc 1 T0IF 1 0 :1:2 
 `uc 1 RBIE 1 0 :1:3 
@@ -49,14 +47,14 @@
 `uc 1 GIE 1 0 :1:7 
 ]
 "482
-[s S185 . 1 `uc 1 . 1 0 :2:0 
+[s S180 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 TMR0IF 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 TMR0IE 1 0 :1:5 
 ]
-[u S190 . 1 `S176 1 . 1 0 `S185 1 . 1 0 ]
-[v _INTCONbits INTCONbits `VES190  1 e 1 @11 ]
-[s S40 . 1 `uc 1 TMR1IF 1 0 :1:0 
+[u S185 . 1 `S171 1 . 1 0 `S180 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES185  1 e 1 @11 ]
+[s S29 . 1 `uc 1 TMR1IF 1 0 :1:0 
 `uc 1 TMR2IF 1 0 :1:1 
 `uc 1 CCP1IF 1 0 :1:2 
 `uc 1 SSPIF 1 0 :1:3 
@@ -65,9 +63,9 @@
 `uc 1 ADIF 1 0 :1:6 
 ]
 "553
-[u S48 . 1 `S40 1 . 1 0 ]
-[v _PIR1bits PIR1bits `VES48  1 e 1 @12 ]
-[s S346 . 1 `uc 1 RX9D 1 0 :1:0 
+[u S37 . 1 `S29 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES37  1 e 1 @12 ]
+[s S335 . 1 `uc 1 RX9D 1 0 :1:0 
 `uc 1 OERR 1 0 :1:1 
 `uc 1 FERR 1 0 :1:2 
 `uc 1 ADDEN 1 0 :1:3 
@@ -77,23 +75,23 @@
 `uc 1 SPEN 1 0 :1:7 
 ]
 "1068
-[s S355 . 1 `uc 1 RCD8 1 0 :1:0 
+[s S344 . 1 `uc 1 RCD8 1 0 :1:0 
 `uc 1 . 1 0 :5:1 
 `uc 1 RC9 1 0 :1:6 
 ]
-[s S359 . 1 `uc 1 . 1 0 :6:0 
+[s S348 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 nRC8 1 0 :1:6 
 ]
-[s S362 . 1 `uc 1 . 1 0 :6:0 
+[s S351 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 RC8_9 1 0 :1:6 
 ]
-[u S365 . 1 `S346 1 . 1 0 `S355 1 . 1 0 `S359 1 . 1 0 `S362 1 . 1 0 ]
-[v _RCSTAbits RCSTAbits `VES365  1 e 1 @24 ]
+[u S354 . 1 `S335 1 . 1 0 `S344 1 . 1 0 `S348 1 . 1 0 `S351 1 . 1 0 ]
+[v _RCSTAbits RCSTAbits `VES354  1 e 1 @24 ]
 "1133
 [v _TXREG TXREG `VEuc  1 e 1 @25 ]
 "1140
 [v _RCREG RCREG `VEuc  1 e 1 @26 ]
-[s S98 . 1 `uc 1 PS 1 0 :3:0 
+[s S93 . 1 `uc 1 PS 1 0 :3:0 
 `uc 1 PSA 1 0 :1:3 
 `uc 1 T0SE 1 0 :1:4 
 `uc 1 T0CS 1 0 :1:5 
@@ -101,12 +99,12 @@
 `uc 1 nRBPU 1 0 :1:7 
 ]
 "1366
-[s S105 . 1 `uc 1 PS0 1 0 :1:0 
+[s S100 . 1 `uc 1 PS0 1 0 :1:0 
 `uc 1 PS1 1 0 :1:1 
 `uc 1 PS2 1 0 :1:2 
 ]
-[u S109 . 1 `S98 1 . 1 0 `S105 1 . 1 0 ]
-[v _OPTION_REGbits OPTION_REGbits `VES109  1 e 1 @129 ]
+[u S104 . 1 `S93 1 . 1 0 `S100 1 . 1 0 ]
+[v _OPTION_REGbits OPTION_REGbits `VES104  1 e 1 @129 ]
 "1416
 [v _TRISA TRISA `VEuc  1 e 1 @133 ]
 "1478
@@ -115,24 +113,24 @@
 [v _TRISC TRISC `VEuc  1 e 1 @135 ]
 "1602
 [v _TRISD TRISD `VEuc  1 e 1 @136 ]
-[s S72 . 1 `uc 1 SCS 1 0 :1:0 
+[s S67 . 1 `uc 1 SCS 1 0 :1:0 
 `uc 1 LTS 1 0 :1:1 
 `uc 1 HTS 1 0 :1:2 
 `uc 1 OSTS 1 0 :1:3 
 `uc 1 IRCF 1 0 :3:4 
 ]
 "1882
-[s S78 . 1 `uc 1 . 1 0 :4:0 
+[s S73 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 IRCF0 1 0 :1:4 
 `uc 1 IRCF1 1 0 :1:5 
 `uc 1 IRCF2 1 0 :1:6 
 ]
-[u S83 . 1 `S72 1 . 1 0 `S78 1 . 1 0 ]
-[v _OSCCONbits OSCCONbits `VES83  1 e 1 @143 ]
-[s S124 . 1 `uc 1 WPUB 1 0 :8:0 
+[u S78 . 1 `S67 1 . 1 0 `S73 1 . 1 0 ]
+[v _OSCCONbits OSCCONbits `VES78  1 e 1 @143 ]
+[s S119 . 1 `uc 1 WPUB 1 0 :8:0 
 ]
 "2366
-[s S126 . 1 `uc 1 WPUB0 1 0 :1:0 
+[s S121 . 1 `uc 1 WPUB0 1 0 :1:0 
 `uc 1 WPUB1 1 0 :1:1 
 `uc 1 WPUB2 1 0 :1:2 
 `uc 1 WPUB3 1 0 :1:3 
@@ -141,12 +139,12 @@
 `uc 1 WPUB6 1 0 :1:6 
 `uc 1 WPUB7 1 0 :1:7 
 ]
-[u S135 . 1 `S124 1 . 1 0 `S126 1 . 1 0 ]
-[v _WPUBbits WPUBbits `VES135  1 e 1 @149 ]
-[s S150 . 1 `uc 1 IOCB 1 0 :8:0 
+[u S130 . 1 `S119 1 . 1 0 `S121 1 . 1 0 ]
+[v _WPUBbits WPUBbits `VES130  1 e 1 @149 ]
+[s S145 . 1 `uc 1 IOCB 1 0 :8:0 
 ]
 "2436
-[s S152 . 1 `uc 1 IOCB0 1 0 :1:0 
+[s S147 . 1 `uc 1 IOCB0 1 0 :1:0 
 `uc 1 IOCB1 1 0 :1:1 
 `uc 1 IOCB2 1 0 :1:2 
 `uc 1 IOCB3 1 0 :1:3 
@@ -155,9 +153,9 @@
 `uc 1 IOCB6 1 0 :1:6 
 `uc 1 IOCB7 1 0 :1:7 
 ]
-[u S161 . 1 `S150 1 . 1 0 `S152 1 . 1 0 ]
-[v _IOCBbits IOCBbits `VES161  1 e 1 @150 ]
-[s S286 . 1 `uc 1 TX9D 1 0 :1:0 
+[u S156 . 1 `S145 1 . 1 0 `S147 1 . 1 0 ]
+[v _IOCBbits IOCBbits `VES156  1 e 1 @150 ]
+[s S275 . 1 `uc 1 TX9D 1 0 :1:0 
 `uc 1 TRMT 1 0 :1:1 
 `uc 1 BRGH 1 0 :1:2 
 `uc 1 SENDB 1 0 :1:3 
@@ -167,20 +165,20 @@
 `uc 1 CSRC 1 0 :1:7 
 ]
 "2582
-[s S295 . 1 `uc 1 TXD8 1 0 :1:0 
+[s S284 . 1 `uc 1 TXD8 1 0 :1:0 
 `uc 1 . 1 0 :5:1 
 `uc 1 nTX8 1 0 :1:6 
 ]
-[s S299 . 1 `uc 1 . 1 0 :6:0 
+[s S288 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 TX8_9 1 0 :1:6 
 ]
-[u S302 . 1 `S286 1 . 1 0 `S295 1 . 1 0 `S299 1 . 1 0 ]
-[v _TXSTAbits TXSTAbits `VES302  1 e 1 @152 ]
+[u S291 . 1 `S275 1 . 1 0 `S284 1 . 1 0 `S288 1 . 1 0 ]
+[v _TXSTAbits TXSTAbits `VES291  1 e 1 @152 ]
 "2642
 [v _SPBRG SPBRG `VEuc  1 e 1 @153 ]
 "2704
 [v _SPBRGH SPBRGH `VEuc  1 e 1 @154 ]
-[s S323 . 1 `uc 1 ABDEN 1 0 :1:0 
+[s S312 . 1 `uc 1 ABDEN 1 0 :1:0 
 `uc 1 WUE 1 0 :1:1 
 `uc 1 . 1 0 :1:2 
 `uc 1 BRG16 1 0 :1:3 
@@ -190,8 +188,8 @@
 `uc 1 ABDOVF 1 0 :1:7 
 ]
 "3352
-[u S332 . 1 `S323 1 . 1 0 ]
-[v _BAUDCTLbits BAUDCTLbits `VES332  1 e 1 @391 ]
+[u S321 . 1 `S312 1 . 1 0 ]
+[v _BAUDCTLbits BAUDCTLbits `VES321  1 e 1 @391 ]
 "3387
 [v _ANSEL ANSEL `VEuc  1 e 1 @392 ]
 "3449
@@ -207,26 +205,19 @@
 [v _cont1 cont1 `uc  1 e 1 0 ]
 "28
 [v _listo listo `uc  1 e 1 0 ]
-"30
-[v _oldCont oldCont `uc  1 e 1 0 ]
-[v _oldCont1 oldCont1 `uc  1 e 1 0 ]
 "31
 [v _centena centena `uc  1 e 1 0 ]
 [v _decena decena `uc  1 e 1 0 ]
 [v _unidad unidad `uc  1 e 1 0 ]
-"32
-[v _centena2 centena2 `uc  1 e 1 0 ]
-[v _decena2 decena2 `uc  1 e 1 0 ]
-[v _unidad2 unidad2 `uc  1 e 1 0 ]
 "48
 [v _main main `(v  1 e 1 0 ]
 {
-"104
+"108
 } 0
-"106
+"110
 [v _setup setup `(v  1 e 1 0 ]
 {
-"137
+"141
 } 0
 "11 C:\Users\Pavilion\OneDrive\Documentos\Electronica digital 2\Lab05.X\USART.c
 [v _USART_Int USART_Int `(v  1 e 1 0 ]
@@ -269,15 +260,7 @@
 [v ___awdiv@dividend dividend `i  1 p 2 4 ]
 "41
 } 0
-"36 C:\Users\Pavilion\OneDrive\Documentos\Electronica digital 2\Lab05.X\USART.c
-[v _USART_string USART_string `(v  1 e 1 0 ]
-{
-[v USART_string@cadena cadena `*.24uc  1 a 1 wreg ]
-[v USART_string@cadena cadena `*.24uc  1 a 1 wreg ]
-[v USART_string@cadena cadena `*.24uc  1 a 1 5 ]
-"41
-} 0
-"27
+"27 C:\Users\Pavilion\OneDrive\Documentos\Electronica digital 2\Lab05.X\USART.c
 [v _USART_Tx USART_Tx `(v  1 e 1 0 ]
 {
 [v USART_Tx@data data `uc  1 a 1 wreg ]

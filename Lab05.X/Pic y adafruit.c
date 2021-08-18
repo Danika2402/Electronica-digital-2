@@ -48,26 +48,32 @@ void __interrupt() isr(void){
 void main(void) {
     setup();
     while(1){
-        oldCont = cont;
-        oldCont1 = cont1;
-        
+
         centena = (cont / 100);
         decena = ((cont - (centena*100)) / 10);
         unidad = ((cont - (centena*100)) - (decena*10));
-        
-        centena2 = (PORTA /100);
-        decena2 = ((PORTA - (centena2*100)) / 10);
-        unidad2 = ((PORTA - (centena2*100)) - (decena2*10));
         
         centena += 48;
         decena += 48;
         unidad += 48;
         
-        centena2 += 48;
-        decena2 += 48;
-        unidad2 += 48;
+        if (PIR1bits.RCIF == 1){
         
-        if(oldCont != cont ||  oldCont1!= cont1){
+            listo = USART_Rx();
+            cont1 = listo;
+            if(listo == 's'){
+            USART_Tx(centena);
+            USART_Tx(decena);
+            USART_Tx(unidad);
+            listo = 0;
+            
+            }
+            PIR1bits.RCIF = 0; 
+        }
+        PORTD = cont;
+        PORTA = cont1;
+        
+        /*if(oldCont != cont ||  oldCont1!= cont1){
             
             USART_string("+ para aumentar PORTA\n\r");
             USART_string("- para decrementar PORTA\n\r");
@@ -84,8 +90,8 @@ void main(void) {
             USART_Tx(unidad2);
             USART_string("V\n\r");            
             
-        }
-
+        }*/
+        /*
         if (PIR1bits.RCIF == 1){
             listo = USART_Rx();
             if(listo == '+'){
@@ -93,10 +99,8 @@ void main(void) {
             }else if(listo == '-'){
                 cont1--;
             }
-        }
-        PORTD = cont;
-        PORTA = cont1;
-        listo = 0;
+        }*/
+
        
     }
     
