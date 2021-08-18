@@ -61,13 +61,13 @@ void main(void) {
         
             listo = USART_Rx();
             cont1 = listo;
-            if(listo == 's'){
-            USART_Tx(centena);
-            USART_Tx(decena);
-            USART_Tx(unidad);
-            listo = 0;
+                if(listo == 's'){
+                    USART_Tx(centena);
+                    USART_Tx(decena);
+                    USART_Tx(unidad);
+                    listo = 0;
             
-            }
+                }
             PIR1bits.RCIF = 0; 
         }
         PORTD = cont;

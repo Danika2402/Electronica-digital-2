@@ -10,7 +10,7 @@ import time
 ada = 0
 portA = 0
 
-ADAFRUIT_I0_KEY = "aio_YhCX006DY3s3ifZJDmh65l5TUhyk"
+ADAFRUIT_I0_KEY = "aio_bFvR07Ph7b9jDZjrhs9HoDuV4xMW"
 ADAFRUIT_I0_USERNAME = "Danika"
 aio = Client(ADAFRUIT_I0_USERNAME,ADAFRUIT_I0_KEY)
 
@@ -52,4 +52,3 @@ while(True):
         elif(Decidir == '2'):
             print("Se termino el programa")
             break
-
