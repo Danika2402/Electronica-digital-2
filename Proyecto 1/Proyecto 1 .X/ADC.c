@@ -7,6 +7,7 @@
 #include <stdint.h>
 #include <xc.h>
 #include "ADC.h"
+#define _XTAL_FREQ 8000000
 
 void ADC_Int(void){
         //Config. ADC
@@ -14,13 +15,13 @@ void ADC_Int(void){
     ADCON1bits.VCFG0 = 0;   //voltajes de referencia
     ADCON1bits.VCFG1 = 0;
     
-    ADCON0bits.ADCS0 = 0;   //fosc/8, Tad = 2us
+    ADCON0bits.ADCS0 = 0;   //fosc/32
     ADCON0bits.ADCS1 = 1;
-
+/*
     INTCONbits.PEIE  =1;    
     PIR1bits.ADIF   = 0;    //bajando bandera
     PIE1bits.ADIE   = 1;    //habilitando bandera
-    
+  */  
     ADCON1bits.ADFM =0; //izquierda
     
     ADCON0bits.ADON = 1;    //enciende modulo y permite conversion 
