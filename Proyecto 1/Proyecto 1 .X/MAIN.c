@@ -20,13 +20,13 @@
 
 #include <stdint.h>
 #include <xc.h>
-#include "USART.h"
+#include "USART.h"  //Librerias
 #include "LCD.h"
 #include "I2C.h"
 #include "ADC.h"
 #define _XTAL_FREQ 8000000
 
-void setup(void);
+void setup(void);   //variables y funciones 
 int TEMP;
 char foto1, foto2;
 char servo1,servo2;
@@ -53,11 +53,11 @@ void valores2(char decenasdemiles,char miles,char centenas, char decenas, char u
 void __interrupt() isr(void){
         if(RBIF == 1){
                 
-            if(RB2 == 0){
-                cont++;
-            }
+            if(RB2 == 0){   //interrupcion push button pull up
+                cont++;     //en solo el pin RB2, que incrementa al variable
+            }               //cont
         }
-        RBIF = 0;
+        RBIF = 0;           //se baja la bandera
 }
 
 void main(void) {
@@ -66,74 +66,74 @@ void main(void) {
     while(1){
         
         if(ADCON0bits.GO == 0){
-            if (ADCON0bits.CHS  == 12){     //cuando este en el canal 12 
-                foto1   = ADRESH;           //El potenciometro esta conectado a ese canal
-                ADCON0bits.CHS  = 10;       //pot se convierte y se muestre en el puerto
+            if (ADCON0bits.CHS  == 12){     //La primera fotoresistencia esta
+                foto1   = ADRESH;           //en el canal 12, se guarda el
+                ADCON0bits.CHS  = 10;       //ADRESH en la variable "foto1"
 
 
-            } else if (ADCON0bits.CHS  == 10){
-                PORTA = ADRESH;                                //Despues de eso se cambia al canal 10 
-                foto2   = ADRESH;               //donde hay un segundo potenciometro
-                ADCON0bits.CHS  = 12;       //este manda sus valores a convertirlos
-                        //y los guarda en la variable p
+            } else if (ADCON0bits.CHS  == 10){  //Se cambio de canal al 10
+                PORTA = ADRESH;                 //donde esta la segunda  
+                foto2   = ADRESH;               //fotoresistencia
+                ADCON0bits.CHS  = 12;            
+                        
             }
             __delay_us(50); 
-            ADCON0bits.GO = 1;       
+            ADCON0bits.GO = 1;       //se baja la bandera
         }
         
         
-        decmil1 = foto1/10000;
-        mil1 = (foto1 - (decmil1*10000))/1000;
+        decmil1 = foto1/10000;  //las fotoresistencias reales pueden llegar 
+        mil1 = (foto1 - (decmil1*10000))/1000;//hasta 20,000
         cen1  = (foto1 - (decmil1*10000) - (mil1*1000))/100;
         dec1 = ((foto1 - (decmil1*10000) - (mil1*1000)-(cen1*100)) / 10);
         uni1 = ((foto1 - (decmil1*10000) - (mil1*1000)-(cen1*100)) - (dec1*10));
                 
-        decmil2 = foto2/10000;
-        mil2 = (foto2 - (decmil2*10000))/1000;
+        decmil2 = foto2/10000;//las resistencias son poco a poco 
+        mil2 = (foto2 - (decmil2*10000))/1000;//divididas entre miles, cent, dec,etc
         cen2  = (foto2 - (decmil2*10000) - (mil2*1000))/100;
         dec2 = ((foto2 - (decmil2*10000) - (mil2*1000)-(cen2*100)) / 10);
         uni2 = ((foto2 - (decmil2*10000) - (mil2*1000)- (cen2*100)) - (dec2*10));
 
-        seg = read_rtc(0x00);
-        min = read_rtc(0x01);
-        hora = read_rtc(0x02);
+        seg = read_rtc(0x00);   //Aqui llamamos al RTC
+        min = read_rtc(0x01);   //llamamos a la funcion y le enviamos un dato
+        hora = read_rtc(0x02);  //en hexadecimal, segun el datasheet
         dia = read_rtc(0x04);
         mes = read_rtc(0x05);
         year = read_rtc(0x06);
         
-        seg = (seg >>4)*10 + (seg & 0x0f);
+        seg = (seg >>4)*10 + (seg & 0x0f);  //convertir BDC a decimal
         min = (min >>4)*10 +(min & 0x0f);
         hora = (hora>>4)*10 + (hora & 0x0f);
         dia = (dia>>4)*10 + (dia & 0x0f);
         mes = (mes>>4)*10 + (mes & 0x0f);
         year=(year >>4)*10 + (year & 0x0f);
         
-        time[12] = (seg % 10) + 48;
-        time[11] = (seg/10) + 48;
-        time[9] = (min % 10) + 48;
+        time[12] = (seg % 10) + 48; //En esta variable guardamos las otras en
+        time[11] = (seg/10) + 48;   //forma de un caracter
+        time[9] = (min % 10) + 48;  
         time[8] = (min/10) + 48;
         time[6] = (hora % 10) + 48;
         time[5] = (hora/10) + 48;
         
-        calendario[14]=(year % 10) + 48;
+        calendario[14]=(year % 10) + 48;    //igual con esta variable
         calendario[13] = (year/10) + 48;
         calendario[9] = (mes % 10) + 48;
         calendario[8] = (mes/10) + 48;
         calendario[6] = (dia % 10) + 48;
         calendario[5] = (dia/10) + 48;
                 
-                
+        //se suman las variables para asi compararlas entre si 
         fotoresistencia1 = (decmil1*10000) + (mil1*1000) + (cen1*100) + (dec1*10) + (uni1);
         fotoresistencia2 = (decmil2*10000) + (mil2*1000) + (cen2*100) + (dec2*10) + (uni2);
         
         if(cont ==0){
             LCD_XY(0,0);
-            LCD_Cadena("Foto1     Foto2");
-            valores(decmil1,mil1,cen1,dec1,uni1);
-            valores2(decmil2,mil2,cen2,dec2,uni2);
-            
+            LCD_Cadena("Foto1     Foto2");          //con la variable cont que
+            valores(decmil1,mil1,cen1,dec1,uni1);   //es incrementada por el boton
+            valores2(decmil2,mil2,cen2,dec2,uni2);  //podemos controlar lo que
+                                                //el LCD muesta
         }else if (cont == 1){
-            LCD_XY(0,0);
+            LCD_XY(0,0);                    
             LCD_Cadena(time);
             LCD_XY(2,0);
             LCD_Cadena(calendario);
@@ -142,7 +142,7 @@ void main(void) {
             LCD_Cadena("           ");
             cont = 0;
         }
-        
+            //aqui comparamos las fotoresistencias para controlar el servo
         if((fotoresistencia2 <= 100) && (fotoresistencia1 <= 100)){
             
                 CCPR1L  = 187;              //1.5ms 0 grados
@@ -164,11 +164,11 @@ void main(void) {
                 CCP1CONbits.DC1B1 = 1;
         }
         
-        if (PIR1bits.RCIF == 1){
-        
-            listo = USART_Rx();
-
-                if(listo == 'f'){
+        if (PIR1bits.RCIF == 1){    //aqui empezamos la comunicacion serial 
+                                    //la variable listo recibe un caracter de
+            listo = USART_Rx();     //python, dependiendo de este
+                                    //entonces el pic manda los datos de 
+                if(listo == 'f'){           //la foto1 oh la foto2
                     USART_Tx(decmil1 + 48);
                     USART_Tx(mil1 + 48);
                     USART_Tx(cen1 + 48);
@@ -242,31 +242,31 @@ void setup(void){
     WPUBbits.WPUB2 = 1;
     IOCBbits.IOCB2 = 1; // pines en lo que habra interrupcion por cambio 
     
-    INTCONbits.GIE = 1;     
+    INTCONbits.GIE = 1;     //habilitar interrupciones para puerto B pull up
     INTCONbits.RBIE = 1;    
     INTCONbits.RBIF = 0; 
     
     cont = 0;
     
-    canal(12);   
+    canal(12);              //llamamos al canal y configuracion ADC
     ADC_Int();
 
-    USART_Int();
-    LCD_Init();
+    USART_Int();            //configuracion USART
+    LCD_Init();             //configuracion del LCD
     I2C_Master_Init(100000);        // Inicializar Comuncación I2C
 }
 
 unsigned short read_rtc(unsigned short address){
     
-    unsigned short data;
-    I2C_Master_Start();
+    unsigned short data;        //el adress es el que controla que dato
+    I2C_Master_Start();         //queremos del rtc, segundos, minutos o meses
     I2C_Master_Write(0xD0);
     I2C_Master_Write(address);
     I2C_Master_Stop();
     __delay_ms(200);
     
-    I2C_Master_Start();
-    I2C_Master_Write(0xD1);
+    I2C_Master_Start();         //mandamos a que el rtc enviara los datos al 
+    I2C_Master_Write(0xD1);     //master y lo guardamos en una variable
     data = I2C_Master_Read(0);
     I2C_Master_Stop();
     __delay_ms(200);
@@ -277,8 +277,8 @@ unsigned short read_rtc(unsigned short address){
 void valores(char decenasdemiles,char miles,char centenas, char decenas, char unidades){
     
     decenasdemiles +=48;
-    miles += 48;
-    centenas += 48;
+    miles += 48;                //aqui organizamos las variables de cada
+    centenas += 48;             //fotoresistencia para que aparesca en el LCD
     decenas += 48;
     unidades += 48;
     
@@ -295,7 +295,7 @@ void valores2(char decenasdemiles,char miles,char centenas, char decenas, char u
     
     decenasdemiles +=48;
     miles += 48;
-    centenas += 48;
+    centenas += 48;         //misma funcion pero para la segunda fotoresistencia
     decenas += 48;
     unidades += 48;
     

@@ -51,7 +51,7 @@ dataBANK1 BANK1 1 A0 A0 1E 1
 clrtext CODE 0 B2F B2F 8 2
 bssCOMMON COMMON 1 78 78 3 1
 config CONFIG 4 2007 2007 2 2
-$C:\Users\Pavilion\AppData\Local\Temp\sj4g.o
+$C:\Users\Pavilion\AppData\Local\Temp\sgbo.o
 reset_vec CODE 0 0 0 3 2
 end_init CODE 0 C C 3 2
 config CONFIG 4 2007 2007 2 2
@@ -111,28 +111,28 @@ STRING 1000-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\Proyecto_1_.X.production.o
-F cinit CODE >1309:C:\Users\Pavilion\AppData\Local\Temp\sj4g.s
-F cinit CODE >1312:C:\Users\Pavilion\AppData\Local\Temp\sj4g.s
-F cinit CODE >1446:C:\Users\Pavilion\AppData\Local\Temp\sj4g.s
-10 cinit CODE >1447:C:\Users\Pavilion\AppData\Local\Temp\sj4g.s
-11 cinit CODE >1448:C:\Users\Pavilion\AppData\Local\Temp\sj4g.s
-12 cinit CODE >1449:C:\Users\Pavilion\AppData\Local\Temp\sj4g.s
-13 cinit CODE >1450:C:\Users\Pavilion\AppData\Local\Temp\sj4g.s
-14 cinit CODE >1451:C:\Users\Pavilion\AppData\Local\Temp\sj4g.s
-15 cinit CODE >1452:C:\Users\Pavilion\AppData\Local\Temp\sj4g.s
-16 cinit CODE >1453:C:\Users\Pavilion\AppData\Local\Temp\sj4g.s
-17 cinit CODE >1454:C:\Users\Pavilion\AppData\Local\Temp\sj4g.s
-18 cinit CODE >1455:C:\Users\Pavilion\AppData\Local\Temp\sj4g.s
-1D cinit CODE >1474:C:\Users\Pavilion\AppData\Local\Temp\sj4g.s
-1E cinit CODE >1475:C:\Users\Pavilion\AppData\Local\Temp\sj4g.s
-1F cinit CODE >1476:C:\Users\Pavilion\AppData\Local\Temp\sj4g.s
-20 cinit CODE >1477:C:\Users\Pavilion\AppData\Local\Temp\sj4g.s
-25 cinit CODE >1480:C:\Users\Pavilion\AppData\Local\Temp\sj4g.s
-26 cinit CODE >1481:C:\Users\Pavilion\AppData\Local\Temp\sj4g.s
-27 cinit CODE >1482:C:\Users\Pavilion\AppData\Local\Temp\sj4g.s
-28 cinit CODE >1488:C:\Users\Pavilion\AppData\Local\Temp\sj4g.s
-28 cinit CODE >1490:C:\Users\Pavilion\AppData\Local\Temp\sj4g.s
-29 cinit CODE >1491:C:\Users\Pavilion\AppData\Local\Temp\sj4g.s
+F cinit CODE >1309:C:\Users\Pavilion\AppData\Local\Temp\sgbo.s
+F cinit CODE >1312:C:\Users\Pavilion\AppData\Local\Temp\sgbo.s
+F cinit CODE >1446:C:\Users\Pavilion\AppData\Local\Temp\sgbo.s
+10 cinit CODE >1447:C:\Users\Pavilion\AppData\Local\Temp\sgbo.s
+11 cinit CODE >1448:C:\Users\Pavilion\AppData\Local\Temp\sgbo.s
+12 cinit CODE >1449:C:\Users\Pavilion\AppData\Local\Temp\sgbo.s
+13 cinit CODE >1450:C:\Users\Pavilion\AppData\Local\Temp\sgbo.s
+14 cinit CODE >1451:C:\Users\Pavilion\AppData\Local\Temp\sgbo.s
+15 cinit CODE >1452:C:\Users\Pavilion\AppData\Local\Temp\sgbo.s
+16 cinit CODE >1453:C:\Users\Pavilion\AppData\Local\Temp\sgbo.s
+17 cinit CODE >1454:C:\Users\Pavilion\AppData\Local\Temp\sgbo.s
+18 cinit CODE >1455:C:\Users\Pavilion\AppData\Local\Temp\sgbo.s
+1D cinit CODE >1474:C:\Users\Pavilion\AppData\Local\Temp\sgbo.s
+1E cinit CODE >1475:C:\Users\Pavilion\AppData\Local\Temp\sgbo.s
+1F cinit CODE >1476:C:\Users\Pavilion\AppData\Local\Temp\sgbo.s
+20 cinit CODE >1477:C:\Users\Pavilion\AppData\Local\Temp\sgbo.s
+25 cinit CODE >1480:C:\Users\Pavilion\AppData\Local\Temp\sgbo.s
+26 cinit CODE >1481:C:\Users\Pavilion\AppData\Local\Temp\sgbo.s
+27 cinit CODE >1482:C:\Users\Pavilion\AppData\Local\Temp\sgbo.s
+28 cinit CODE >1488:C:\Users\Pavilion\AppData\Local\Temp\sgbo.s
+28 cinit CODE >1490:C:\Users\Pavilion\AppData\Local\Temp\sgbo.s
+29 cinit CODE >1491:C:\Users\Pavilion\AppData\Local\Temp\sgbo.s
 4 intentry CODE >53:C:\Users\Pavilion\OneDrive\Documentos\Electronica digital 2\Proyecto 1\Proyecto 1 .X\MAIN.c
 BA9 text26 CODE >53:C:\Users\Pavilion\OneDrive\Documentos\Electronica digital 2\Proyecto 1\Proyecto 1 .X\MAIN.c
 BA9 text26 CODE >54:C:\Users\Pavilion\OneDrive\Documentos\Electronica digital 2\Proyecto 1\Proyecto 1 .X\MAIN.c
@@ -614,33 +614,33 @@ E6 maintext CODE >88:C:\Users\Pavilion\OneDrive\Documentos\Electronica digital 2
 74A maintext CODE >183:C:\Users\Pavilion\OneDrive\Documentos\Electronica digital 2\Proyecto 1\Proyecto 1 .X\MAIN.c
 753 maintext CODE >184:C:\Users\Pavilion\OneDrive\Documentos\Electronica digital 2\Proyecto 1\Proyecto 1 .X\MAIN.c
 756 maintext CODE >186:C:\Users\Pavilion\OneDrive\Documentos\Electronica digital 2\Proyecto 1\Proyecto 1 .X\MAIN.c
-B2F clrtext CODE >1461:C:\Users\Pavilion\AppData\Local\Temp\sj4g.s
-B2F clrtext CODE >1462:C:\Users\Pavilion\AppData\Local\Temp\sj4g.s
-B30 clrtext CODE >1463:C:\Users\Pavilion\AppData\Local\Temp\sj4g.s
-B30 clrtext CODE >1464:C:\Users\Pavilion\AppData\Local\Temp\sj4g.s
-B31 clrtext CODE >1465:C:\Users\Pavilion\AppData\Local\Temp\sj4g.s
-B32 clrtext CODE >1466:C:\Users\Pavilion\AppData\Local\Temp\sj4g.s
-B33 clrtext CODE >1467:C:\Users\Pavilion\AppData\Local\Temp\sj4g.s
-B34 clrtext CODE >1468:C:\Users\Pavilion\AppData\Local\Temp\sj4g.s
-B35 clrtext CODE >1469:C:\Users\Pavilion\AppData\Local\Temp\sj4g.s
-B36 clrtext CODE >1470:C:\Users\Pavilion\AppData\Local\Temp\sj4g.s
-B6C inittext CODE >1420:C:\Users\Pavilion\AppData\Local\Temp\sj4g.s
-B6C inittext CODE >1421:C:\Users\Pavilion\AppData\Local\Temp\sj4g.s
-B6D inittext CODE >1422:C:\Users\Pavilion\AppData\Local\Temp\sj4g.s
-B6E inittext CODE >1423:C:\Users\Pavilion\AppData\Local\Temp\sj4g.s
-B6F inittext CODE >1424:C:\Users\Pavilion\AppData\Local\Temp\sj4g.s
-B70 inittext CODE >1431:C:\Users\Pavilion\AppData\Local\Temp\sj4g.s
-B70 inittext CODE >1432:C:\Users\Pavilion\AppData\Local\Temp\sj4g.s
-B75 inittext CODE >1433:C:\Users\Pavilion\AppData\Local\Temp\sj4g.s
-B76 inittext CODE >1434:C:\Users\Pavilion\AppData\Local\Temp\sj4g.s
-B77 inittext CODE >1435:C:\Users\Pavilion\AppData\Local\Temp\sj4g.s
-B78 inittext CODE >1436:C:\Users\Pavilion\AppData\Local\Temp\sj4g.s
-B79 inittext CODE >1437:C:\Users\Pavilion\AppData\Local\Temp\sj4g.s
-B7A inittext CODE >1438:C:\Users\Pavilion\AppData\Local\Temp\sj4g.s
-B7B inittext CODE >1439:C:\Users\Pavilion\AppData\Local\Temp\sj4g.s
-B7C inittext CODE >1440:C:\Users\Pavilion\AppData\Local\Temp\sj4g.s
-B7D inittext CODE >1441:C:\Users\Pavilion\AppData\Local\Temp\sj4g.s
-B7E inittext CODE >1442:C:\Users\Pavilion\AppData\Local\Temp\sj4g.s
+B2F clrtext CODE >1461:C:\Users\Pavilion\AppData\Local\Temp\sgbo.s
+B2F clrtext CODE >1462:C:\Users\Pavilion\AppData\Local\Temp\sgbo.s
+B30 clrtext CODE >1463:C:\Users\Pavilion\AppData\Local\Temp\sgbo.s
+B30 clrtext CODE >1464:C:\Users\Pavilion\AppData\Local\Temp\sgbo.s
+B31 clrtext CODE >1465:C:\Users\Pavilion\AppData\Local\Temp\sgbo.s
+B32 clrtext CODE >1466:C:\Users\Pavilion\AppData\Local\Temp\sgbo.s
+B33 clrtext CODE >1467:C:\Users\Pavilion\AppData\Local\Temp\sgbo.s
+B34 clrtext CODE >1468:C:\Users\Pavilion\AppData\Local\Temp\sgbo.s
+B35 clrtext CODE >1469:C:\Users\Pavilion\AppData\Local\Temp\sgbo.s
+B36 clrtext CODE >1470:C:\Users\Pavilion\AppData\Local\Temp\sgbo.s
+B6C inittext CODE >1420:C:\Users\Pavilion\AppData\Local\Temp\sgbo.s
+B6C inittext CODE >1421:C:\Users\Pavilion\AppData\Local\Temp\sgbo.s
+B6D inittext CODE >1422:C:\Users\Pavilion\AppData\Local\Temp\sgbo.s
+B6E inittext CODE >1423:C:\Users\Pavilion\AppData\Local\Temp\sgbo.s
+B6F inittext CODE >1424:C:\Users\Pavilion\AppData\Local\Temp\sgbo.s
+B70 inittext CODE >1431:C:\Users\Pavilion\AppData\Local\Temp\sgbo.s
+B70 inittext CODE >1432:C:\Users\Pavilion\AppData\Local\Temp\sgbo.s
+B75 inittext CODE >1433:C:\Users\Pavilion\AppData\Local\Temp\sgbo.s
+B76 inittext CODE >1434:C:\Users\Pavilion\AppData\Local\Temp\sgbo.s
+B77 inittext CODE >1435:C:\Users\Pavilion\AppData\Local\Temp\sgbo.s
+B78 inittext CODE >1436:C:\Users\Pavilion\AppData\Local\Temp\sgbo.s
+B79 inittext CODE >1437:C:\Users\Pavilion\AppData\Local\Temp\sgbo.s
+B7A inittext CODE >1438:C:\Users\Pavilion\AppData\Local\Temp\sgbo.s
+B7B inittext CODE >1439:C:\Users\Pavilion\AppData\Local\Temp\sgbo.s
+B7C inittext CODE >1440:C:\Users\Pavilion\AppData\Local\Temp\sgbo.s
+B7D inittext CODE >1441:C:\Users\Pavilion\AppData\Local\Temp\sgbo.s
+B7E inittext CODE >1442:C:\Users\Pavilion\AppData\Local\Temp\sgbo.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -671,7 +671,7 @@ __Hstrings 0 0 ABS 0 strings -
 _LCD_Cadena 18D2 0 CODE 0 text24 dist/default/production\Proyecto_1_.X.production.o
 _PEIE 5E 0 ABS 0 - dist/default/production\Proyecto_1_.X.production.o
 _RBIF 58 0 ABS 0 - dist/default/production\Proyecto_1_.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\Pavilion\AppData\Local\Temp\sj4g.o
+___sp 0 0 STACK 2 stack C:\Users\Pavilion\AppData\Local\Temp\sgbo.o
 _cen1 3F 0 BANK0 1 bssBANK0 dist/default/production\Proyecto_1_.X.production.o
 _cen2 3B 0 BANK0 1 bssBANK0 dist/default/production\Proyecto_1_.X.production.o
 _cont 40 0 BANK0 1 bssBANK0 dist/default/production\Proyecto_1_.X.production.o
@@ -686,7 +686,7 @@ _uni1 3D 0 BANK0 1 bssBANK0 dist/default/production\Proyecto_1_.X.production.o
 _uni2 39 0 BANK0 1 bssBANK0 dist/default/production\Proyecto_1_.X.production.o
 _year 2A 0 BANK0 1 bssBANK0 dist/default/production\Proyecto_1_.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\Proyecto_1_.X.production.o
-start 18 0 CODE 0 init C:\Users\Pavilion\AppData\Local\Temp\sj4g.o
+start 18 0 CODE 0 init C:\Users\Pavilion\AppData\Local\Temp\sgbo.o
 __size_of___awdiv 0 0 ABS 0 - dist/default/production\Proyecto_1_.X.production.o
 __size_of___awmod 0 0 ABS 0 - dist/default/production\Proyecto_1_.X.production.o
 __size_of_USART_Rx 0 0 ABS 0 - dist/default/production\Proyecto_1_.X.production.o
@@ -706,12 +706,12 @@ I2C_Master_Read@a 73 0 COMMON 1 cstackCOMMON dist/default/production\Proyecto_1_
 __size_of_valores2 0 0 ABS 0 - dist/default/production\Proyecto_1_.X.production.o
 __end_of_LCD_Data 1840 0 CODE 0 text25 dist/default/production\Proyecto_1_.X.production.o
 __end_of_LCD_Init 2000 0 CODE 0 text7 dist/default/production\Proyecto_1_.X.production.o
-intlevel0 0 0 ENTRY 0 functab C:\Users\Pavilion\AppData\Local\Temp\sj4g.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\Pavilion\AppData\Local\Temp\sj4g.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\Pavilion\AppData\Local\Temp\sj4g.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\Pavilion\AppData\Local\Temp\sj4g.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\Pavilion\AppData\Local\Temp\sj4g.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\Pavilion\AppData\Local\Temp\sj4g.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\Pavilion\AppData\Local\Temp\sgbo.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\Pavilion\AppData\Local\Temp\sgbo.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\Pavilion\AppData\Local\Temp\sgbo.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\Pavilion\AppData\Local\Temp\sgbo.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\Pavilion\AppData\Local\Temp\sgbo.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\Pavilion\AppData\Local\Temp\sgbo.o
 __LbssCOMMON 0 0 ABS 0 bssCOMMON -
 ___bmul@multiplicand 73 0 COMMON 1 cstackCOMMON dist/default/production\Proyecto_1_.X.production.o
 _OSCCONbits 8F 0 ABS 0 - dist/default/production\Proyecto_1_.X.production.o
@@ -746,8 +746,8 @@ __size_of_USART_Int 0 0 ABS 0 - dist/default/production\Proyecto_1_.X.production
 _valores2 1A90 0 CODE 0 text1 dist/default/production\Proyecto_1_.X.production.o
 __end_of___lldiv 1E3A 0 CODE 0 text10 dist/default/production\Proyecto_1_.X.production.o
 __size_of_LCD_comando 0 0 ABS 0 - dist/default/production\Proyecto_1_.X.production.o
-___stackhi 0 0 ABS 0 - C:\Users\Pavilion\AppData\Local\Temp\sj4g.o
-___stacklo 0 0 ABS 0 - C:\Users\Pavilion\AppData\Local\Temp\sj4g.o
+___stackhi 0 0 ABS 0 - C:\Users\Pavilion\AppData\Local\Temp\sgbo.o
+___stacklo 0 0 ABS 0 - C:\Users\Pavilion\AppData\Local\Temp\sgbo.o
 __end_of_valores2 1B24 0 CODE 0 text1 dist/default/production\Proyecto_1_.X.production.o
 _BAUDCTLbits 187 0 ABS 0 - dist/default/production\Proyecto_1_.X.production.o
 __size_of_canal 0 0 ABS 0 - dist/default/production\Proyecto_1_.X.production.o
@@ -770,7 +770,7 @@ _SSPCON 14 0 ABS 0 - dist/default/production\Proyecto_1_.X.production.o
 _TRISC3 43B 0 ABS 0 - dist/default/production\Proyecto_1_.X.production.o
 _TRISC4 43C 0 ABS 0 - dist/default/production\Proyecto_1_.X.production.o
 __size_of_LCD_XY 0 0 ABS 0 - dist/default/production\Proyecto_1_.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\Pavilion\AppData\Local\Temp\sj4g.o
+___int_sp 0 0 STACK 2 stack C:\Users\Pavilion\AppData\Local\Temp\sgbo.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -840,7 +840,7 @@ _valores 1A00 0 CODE 0 text2 dist/default/production\Proyecto_1_.X.production.o
 __Lintentry 8 0 CODE 0 intentry -
 ___lldiv@divisor 45 0 BANK0 1 cstackBANK0 dist/default/production\Proyecto_1_.X.production.o
 __stringtab 1000 0 STRING 0 strings dist/default/production\Proyecto_1_.X.production.o
-reset_vec 0 0 CODE 0 reset_vec C:\Users\Pavilion\AppData\Local\Temp\sj4g.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\Pavilion\AppData\Local\Temp\sgbo.o
 __pdataBANK1 A0 0 BANK1 1 dataBANK1 dist/default/production\Proyecto_1_.X.production.o
 __size_of___bmul 0 0 ABS 0 - dist/default/production\Proyecto_1_.X.production.o
 __size_of___wmul 0 0 ABS 0 - dist/default/production\Proyecto_1_.X.production.o
